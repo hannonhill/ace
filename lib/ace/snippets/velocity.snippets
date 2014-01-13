@@ -26,3 +26,86 @@ snippet #import
 # set
 snippet #set
 	#set ( $${1:var} = ${0} )
+# Some useful tools/methods
+# Element.getChild
+snippet .g
+	.getChild("${1}")
+# $_DateTool.format
+snippet $Dat.f
+	\$_DateTool.format("${1:format}", $${2:date})
+# $_DateTool.getDate
+snippet $Dat.g
+	\$_DateTool.getDate($${1:date})
+# $_EscapeTool.html
+snippet $Esc.h
+	\$_EscapeTool.html($${1:string})
+# $_EscapeTool.javascript
+snippet $Esc.j
+	\$_EscapeTool.javascript($${1:string})
+# $_EscapeTool.xml
+snippet $Esc.x
+	\$_EscapeTool.xml($${1:string})
+# $_locate
+snippet $l
+	\$_.locate("${1:path}", ${2:EntityType}, "${3:siteName}")
+# $_locateBlock
+snippet $lb
+	\$_.locateBlock("${1:path}", "${2:siteName}")
+# $_locateFile
+snippet $lfi
+	\$_.locateFile("${1:path}", "${2:siteName}")
+# $_locateFolder
+snippet $lfo
+	\$_.locateFolder("${1:path}", "${2:siteName}")
+# $_locatePage
+snippet $lp
+	\$_.locatePage("${1:path}", "${2:siteName}")
+# $_locateReference
+snippet $lr
+	\$_.locateReference("${1:path}", "${2:siteName}")
+# $_locateSymlink
+snippet $ls
+	\$_.locateSymlink("${1:path}", "${2:siteName}")
+# $_MathTool.add
+snippet $Mat.a
+	\$_MathTool.add(${1:num1}, ${2:num2})
+# $_MathTool.ceil
+snippet $Mat.c
+	\$_MathTool.ceil(${1:num})
+# $_MathTool.div
+snippet $Mat.d
+	\$_MathTool.div(${1:num1}, ${2:num2})
+# $_MathTool.floor
+snippet $Mat.f
+	\$_MathTool.floor(${1:num})
+# $_MathTool.mod
+snippet $Mat.mod
+	\$_MathTool.mod(${1:num1}, ${2:num2})
+# $_MathTool.mul
+snippet $Mat.mul
+	\$_MathTool.mul(${1:num1}, ${2:num2})
+# $_MathTool.sub
+snippet $Mat.s
+	\$_MathTool.sub(${1:num1}, ${2:num2})
+# $_PropertyTool.isNull
+snippet $Pro.i
+	\$_PropertyTool.isNull($${1:object})
+# $_PropertyTool.outputProperties
+snippet $Pro.o
+	\$_PropertyTool.outputProperties($${1:object})
+# $_SerializerTool.serialize
+snippet $Ser.s
+	\$_SerializerTool.serialize($${1:collection}, ${2:true})
+# $_SortTool.addSortCriterion
+snippet $Sor.sc
+	\$_SortTool.addSortCriterion("${1:selector}", "${2:language}", "${3:text|number|qname}", "${4:ascending|descending}", "${5:lower-first|upper-first}")
+# $_SortTool.sort
+snippet $Sor.s
+	\$_SortTool.addSortCriterion("${1:selector}", "${2:language}", "${3:text|number|qname}", "${4:ascending|descending}", "${5:lower-first|upper-first}")
+	\$_SortTool.sort($${6:collection})
+# $_XPathTool.selectNodes
+snippet $X.sn
+	\$_XPathTool.selectNodes($${1:collection}, "${2}")
+# $_XPathTool.selectSingleNode
+snippet $X.ssn
+	\$_XPathTool.selectSingleNode($${1:collection}, "${2}")
